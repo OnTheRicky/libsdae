@@ -19,7 +19,7 @@ class StackedAutoEncoder:
         assert len(self.activations) == len(self.dims), "No. of activations must equal to no. of hidden layers"
         assert all(True if x > 0 else False for x in self.epoch), "No. of epoch must be atleast 1"
         assert set(self.activations + allowed_activations) == set(allowed_activations), "Incorrect activation given."
-        assert self.noise in allowed_noises, "Incorrect noise given"
+        #assert self.noise in allowed_noises, "Incorrect noise given"
 
     def __init__(self, dims, activations, epoch=1000, noise=None, loss='rmse', lr=0.001, batch_size=100, print_step=50):
         self.print_step = print_step
